@@ -1,3 +1,91 @@
 .logo {
-  color: pink;
+  margin-right: 90px;
+  margin-left: 80px;
+  padding-top: 54px;
+  font-size: 25px;
+  color: $color-primary;
+  text-decoration: none;
+  font-family: $font-family-titan;
+  transition-property: transform;
+
+  &:hover {
+    transform: scale(1.3);
+    transition-duration: 2000ms;
+  }
+}
+
+.header {
+  background-color: $color-background;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+}
+
+.header__navigation {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 52px;
+}
+
+.header__list {
+  margin-right: 35px;
+}
+
+.header__link {
+  padding-top: 52px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  font-family: $font-family;
+  color: $color-titles;
+  text-decoration: none;
+  font-style: normal;
+  transition: color 500ms $cubic;
+
+  &:focus,
+  &:hover {
+    color: $color-primary;
+    font-family: $font-family-titan;
+  }
+}
+
+// Style button header
+
+.button {
+  margin-left: auto;
+  margin-right: 50px;
+  padding-top: 40px;
+  transition-property: transform;
+
+  &:hover {
+    transform: scale(0.75);
+    transition-duration: 2000ms;
+  }
+}
+
+.button__header {
+  width: 159px;
+  height: 44px;
+  border-radius: 22px;
+  background-color: $color-titles;
+  color: $color-primary;
+  border: none;
+  cursor: pointer;
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+
+  &:focus,
+  &:hover {
+    font-family: $font-family-titan;
+  }
 }
