@@ -23,7 +23,7 @@
   );
   overflow: hidden;
   background-size: 400% 400%;
-  animation: degrade 9s ease infinite;
+  animation: degrade 8s ease infinite;
 }
 
 @keyframes degrade {
@@ -361,25 +361,25 @@
   // 768+
   @media screen and (min-width: 768px) {
     max-width: 768px;
-    background-image: url(../images/milk-tablet.png);
+    background-image: url(../images/milk-tablet1.png);
   }
 
   @media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
     screen and (min-resolution: 192dpi) and (min-width: 768px),
     screen and (min-resolution: 2dppx) and (min-width: 768px) {
-    background-image: url(../images/milk-tablet.png);
+    background-image: url(../images/milk-tablet1.png);
   }
 
   /* 1200+ */
   @media screen and (min-width: 1200px) {
     max-width: 1200px;
-    background-image: url(../images/milk.png);
+    background-image: url(../images/milk1.png);
   }
 
   @media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
     screen and (min-resolution: 192dpi) and (min-width: 1200px),
     screen and (min-resolution: 2dppx) and (min-width: 1200px) {
-    background-image: url(../images/milk.png);
+    background-image: url(../images/milk1.png);
   }
 }
 
@@ -484,30 +484,30 @@
   @media screen and (min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),
     screen and (min-resolution: 2dppx) {
-    background-image: url(../images/ice-cone-mobile.png);
+    background-image: url(../images/ice-cone-mobile1.png);
   }
   // 768+
   @media screen and (min-width: 768px) {
     max-width: 768px;
-    background-image: url(../images/ice-cone-tablet.png);
+    background-image: url(../images/ice-cone-tablet1.png);
   }
 
   @media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
     screen and (min-resolution: 192dpi) and (min-width: 768px),
     screen and (min-resolution: 2dppx) and (min-width: 768px) {
-    background-image: url(../images/ice-cone-tablet.png);
+    background-image: url(../images/ice-cone-tablet1.png);
   }
 
   /* 1200+ */
   @media screen and (min-width: 1200px) {
     max-width: 1200px;
-    background-image: url(../images/ice-cone.png);
+    background-image: url(../images/ice-cone1.png);
   }
 
   @media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
     screen and (min-resolution: 192dpi) and (min-width: 1200px),
     screen and (min-resolution: 2dppx) and (min-width: 1200px) {
-    background-image: url(../images/ice-cone.png);
+    background-image: url(../images/ice-cone1.png);
   }
 }
 
@@ -540,25 +540,25 @@
   // 768+
   @media screen and (min-width: 768px) {
     max-width: 768px;
-    background-image: url(../images/eat-icecream-tablet.png);
+    background-image: url(../images/eat-icecream-tablet1.png);
   }
 
   @media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
     screen and (min-resolution: 192dpi) and (min-width: 768px),
     screen and (min-resolution: 2dppx) and (min-width: 768px) {
-    background-image: url(../images/eat-icecream-tablet.png);
+    background-image: url(../images/eat-icecream-tablet1.png);
   }
 
   /* 1200+ */
   @media screen and (min-width: 1200px) {
     max-width: 1200px;
-    background-image: url(../images/eat-icecream.png);
+    background-image: url(../images/eat-icecream1.png);
   }
 
   @media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
     screen and (min-resolution: 192dpi) and (min-width: 1200px),
     screen and (min-resolution: 2dppx) and (min-width: 1200px) {
-    background-image: url(../images/eat-icecream.png);
+    background-image: url(../images/eat-icecream1.png);
   }
 }
 
@@ -587,30 +587,30 @@
   @media screen and (min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),
     screen and (min-resolution: 2dppx) {
-    background-image: url(../images/ellipse-mobile.png);
+    background-image: url(../images/ellipse-mobile1.png);
   }
   // 768+
   @media screen and (min-width: 768px) {
     max-width: 768px;
-    background-image: url(../images/ellipse-tablet.png);
+    background-image: url(../images/ellipse-tablet1.png);
   }
 
   @media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
     screen and (min-resolution: 192dpi) and (min-width: 768px),
     screen and (min-resolution: 2dppx) and (min-width: 768px) {
-    background-image: url(../images/ellipse-tablet.png);
+    background-image: url(../images/ellipse-tablet1.png);
   }
 
   /* 1200+ */
   @media screen and (min-width: 1200px) {
     max-width: 1200px;
-    background-image: url(../images/Ellipse.png);
+    background-image: url(../images/Ellipse1.png);
   }
 
   @media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
     screen and (min-resolution: 192dpi) and (min-width: 1200px),
     screen and (min-resolution: 2dppx) and (min-width: 1200px) {
-    background-image: url(../images/Ellipse.png);
+    background-image: url(../images/Ellipse1.png);
   }
 }
 
