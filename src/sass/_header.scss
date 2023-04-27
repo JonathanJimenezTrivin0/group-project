@@ -2,6 +2,7 @@
   margin-right: 90px;
   margin-left: 30px;
   padding-top: 54px;
+  z-index: 3;
   transition-property: transform;
 
   &:hover {
@@ -11,9 +12,32 @@
 }
 
 .header {
-  width: 100%;
-  height: 664px;
-  background-color: $color-background;
+  margin-left: auto;
+  margin-right: auto;
+  background: linear-gradient(
+    130deg,
+    $color-secondary,
+    $color-primary1,
+    $color-background,
+    $color-primary
+  );
+  overflow: hidden;
+  background-size: 400% 400%;
+  animation: degrade 8s ease infinite;
+}
+
+@keyframes degrade {
+  0% {
+    background-position: 1% 50%;
+  }
+
+  50% {
+    background-position: 99% 50%;
+  }
+
+  100% {
+    background-position: 1% 50%;
+  }
 }
 
 .header__container {
@@ -27,13 +51,13 @@
 }
 
 .header__navigation {
+  padding-top: 52px;
+  gap: 35px;
+  margin-left: 70px;
   display: flex;
   justify-content: space-between;
-  padding-top: 52px;
-}
-
-.header__list {
-  margin-right: 35px;
+  flex-wrap: wrap;
+  z-index: 2;
 }
 
 .header__link {
@@ -51,6 +75,15 @@
   &:hover {
     color: $color-primary;
     font-family: $font-family-titan;
+    text-shadow: 11px 7px 0px rgba(212, 20, 67, 0.21);
+  }
+}
+
+// Max-width header__navigation
+
+@media screen and (max-width: 1200px) {
+  .header__navigation {
+    display: none;
   }
 }
 
@@ -58,13 +91,19 @@
 
 .button {
   margin-left: auto;
-  margin-right: 30px;
+  margin-right: 25px;
   padding-top: 40px;
   transition-property: transform;
 
   &:hover {
     transform: scale(0.75);
     transition-duration: 2000ms;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .button {
+    display: none;
   }
 }
 
@@ -81,6 +120,8 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 21px;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 
   &:focus,
   &:hover {
@@ -91,12 +132,14 @@
 // Article header
 
 .article {
-  width: 277px;
   margin-left: 30px;
-  margin-top: 70px;
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
 }
 
 .article__paragraph {
+  width: 277px;
   font-weight: 400;
   font-size: 38px;
   line-height: 44px;
@@ -105,6 +148,13 @@
   text-transform: uppercase;
   font-family: $font-family-titan;
   color: $color-titles;
+  z-index: 3;
+}
+
+@media screen and (max-width: 1000px) {
+  .article__paragraph {
+    font-size: 33px;
+  }
 }
 
 .article__passion {
@@ -116,12 +166,107 @@
   color: $color-primary;
 }
 
+@media screen and (max-width: 1000px) {
+  .article__passion {
+    font-size: 47px;
+  }
+}
+
+.number {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 46px;
+  line-height: 53px;
+  letter-spacing: 0.04px;
+  padding-right: 17px;
+  text-transform: uppercase;
+  font-family: $font-family-titan;
+  color: $color-primary;
+}
+
+@media screen and (max-width: 1000px) {
+  .number {
+    font-size: 28px;
+  }
+}
+
+.number23 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 46px;
+  line-height: 53px;
+  letter-spacing: 0.04px;
+  padding-right: 17px;
+  text-transform: uppercase;
+  font-family: $font-family-titan;
+  color: $color-primary;
+  margin-top: 18px;
+}
+
+@media screen and (max-width: 1000px) {
+  .number23 {
+    font-size: 28px;
+  }
+}
+
+.number__text {
+  margin-top: 20px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  font-style: normal;
+  color: $color-titles;
+  font-family: $font-family;
+}
+
+@media screen and (max-width: 1000px) {
+  .number__text {
+    font-size: 8px;
+  }
+}
+
+.number__text23 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  margin-top: 20px;
+  color: $color-titles;
+  font-family: $font-family;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 1000px) {
+  .number__text23 {
+    font-size: 8px;
+  }
+}
+
+.number__list {
+  margin-left: auto;
+  margin-right: 30px;
+  flex-direction: column;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .number__list {
+    display: none;
+  }
+}
+
 // Button article
 
 .button__article {
   margin-left: 30px;
-  margin-top: 24px;
+  margin-top: 10px;
   display: flex;
+}
+
+@media screen and (max-width: 768px) {
+  .button__article {
+    margin-top: 30px;
+  }
 }
 
 .button__product {
@@ -138,10 +283,28 @@
   color: $color-titles;
   font-family: $font-family;
   transition: font-family 500ms $cubic;
+  z-index: 3;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 
   &:focus,
   &:hover {
     font-family: $font-family-titan;
+    animation: animateY-10 1000ms;
+  }
+}
+
+@keyframes animateY-10 {
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .button__product {
+    width: 62.4px;
+    height: 24px;
+    font-size: 8px;
   }
 }
 
@@ -159,10 +322,22 @@
   background-color: $color-titles;
   color: $color-primary;
   font-family: $font-family;
+  z-index: 3;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 
   &:focus,
   &:hover {
     font-family: $font-family-titan;
+    animation: animateY-10 1000ms;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .button__how {
+    width: 88.2px;
+    height: 24px;
+    font-size: 8px;
   }
 }
 
@@ -172,10 +347,64 @@
   margin-left: 30px;
   margin-top: 40px;
   display: flex;
+  position: relative;
+  z-index: 1;
+}
+
+.milk__bottle {
+  width: 213px;
+  height: 216px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  // 768+
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+    background-image: url(../images/milk-tablet1.png);
+  }
+
+  @media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+    screen and (min-resolution: 192dpi) and (min-width: 768px),
+    screen and (min-resolution: 2dppx) and (min-width: 768px) {
+    background-image: url(../images/milk-tablet1.png);
+  }
+
+  /* 1200+ */
+  @media screen and (min-width: 1200px) {
+    max-width: 1200px;
+    background-image: url(../images/milk1.png);
+  }
+
+  @media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+    screen and (min-resolution: 192dpi) and (min-width: 1200px),
+    screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+    background-image: url(../images/milk1.png);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .milk__bottle {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .milk__bottle {
+    width: 152px;
+    height: 154px;
+  }
+}
+
+.images__list {
+  display: flex;
+  margin-left: auto;
+  margin-right: 30px;
 }
 
 .milk__paragraph {
   width: 200px;
+  height: 78px;
   margin-top: 70px;
   font-style: normal;
   font-weight: 400;
@@ -183,6 +412,19 @@
   line-height: 140%;
   font-family: $font-family;
   color: $color-titles;
+}
+
+@media (max-width: 1000px) {
+  .milk__paragraph {
+    width: 114px;
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .milk__paragraph {
+    display: none;
+  }
 }
 
 .right__arrow {
@@ -199,16 +441,365 @@
   cursor: pointer;
   transition: fill 500ms $cubic;
   transition: background-color 500ms $cubic;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+
+  &:hover,
+  &:focus {
+    fill: $color-titles;
+    background-color: $color-primary;
+  }
 }
 
-.right__arrow:hover,
-.right__arrow:focus {
-  fill: $color-titles;
-  background-color: $color-primary;
+.right:hover {
+  animation: animate90 1000ms;
 }
 
-// Images eat ice cream
-
-.icecream {
-  margin-left: 43%;
+@keyframes animate90 {
+  50% {
+    transform: rotate(-90deg);
+  }
 }
+
+@media (max-width: 1200px) {
+  .right__arrow {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+// Styles images cream
+
+.icecone {
+  width: 236px;
+  height: 557px;
+  position: absolute;
+  bottom: 0px;
+  right: 370px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  // 480+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url(../images/ice-cone-mobile1.png);
+  }
+  // 768+
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+    background-image: url(../images/ice-cone-tablet1.png);
+  }
+
+  @media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+    screen and (min-resolution: 192dpi) and (min-width: 768px),
+    screen and (min-resolution: 2dppx) and (min-width: 768px) {
+    background-image: url(../images/ice-cone-tablet1.png);
+  }
+
+  /* 1200+ */
+  @media screen and (min-width: 1200px) {
+    max-width: 1200px;
+    background-image: url(../images/ice-cone1.png);
+  }
+
+  @media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+    screen and (min-resolution: 192dpi) and (min-width: 1200px),
+    screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+    background-image: url(../images/ice-cone1.png);
+  }
+}
+
+// 1200+
+
+@media screen and (max-width: 1000px) {
+  .icecone {
+    width: 143px;
+    height: 336px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .icecone {
+    width: 143px;
+    height: 336px;
+    position: absolute;
+    right: 180;
+  }
+}
+
+.eat__icecream {
+  max-width: 480px;
+  width: 304px;
+  height: 241px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  // 768+
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+    background-image: url(../images/eat-icecream-tablet1.png);
+  }
+
+  @media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+    screen and (min-resolution: 192dpi) and (min-width: 768px),
+    screen and (min-resolution: 2dppx) and (min-width: 768px) {
+    background-image: url(../images/eat-icecream-tablet1.png);
+  }
+
+  /* 1200+ */
+  @media screen and (min-width: 1200px) {
+    max-width: 1200px;
+    background-image: url(../images/eat-icecream1.png);
+  }
+
+  @media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+    screen and (min-resolution: 192dpi) and (min-width: 1200px),
+    screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+    background-image: url(../images/eat-icecream1.png);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .eat__icecream {
+    width: 190px;
+    height: 150px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .eat__icecream {
+    display: none;
+  }
+}
+
+.svg__circle {
+  position: absolute;
+  bottom: 70px;
+  right: 190px;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+
+  // 480+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url(../images/ellipse-mobile1.png);
+  }
+  // 768+
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+    background-image: url(../images/ellipse-tablet1.png);
+  }
+
+  @media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+    screen and (min-resolution: 192dpi) and (min-width: 768px),
+    screen and (min-resolution: 2dppx) and (min-width: 768px) {
+    background-image: url(../images/ellipse-tablet1.png);
+  }
+
+  /* 1200+ */
+  @media screen and (min-width: 1200px) {
+    max-width: 1200px;
+    background-image: url(../images/Ellipse1.png);
+  }
+
+  @media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+    screen and (min-resolution: 192dpi) and (min-width: 1200px),
+    screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+    background-image: url(../images/Ellipse1.png);
+  }
+}
+
+// 1200+
+
+@media screen and (max-width: 1000px) {
+  .svg__circle {
+    width: 365px;
+    height: 366px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .svg__circle {
+    width: 336px;
+    height: 344px;
+    position: absolute;
+    bottom: 90;
+    left: 80;
+  }
+}
+
+// Styles circles
+
+.circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: flex-end;
+  background-color: $color-titles;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
+// Styles bubbles
+
+.bubble {
+  border-radius: 50%;
+  background: linear-gradient(30deg, $color-primary, $color-titles);
+  opacity: 0.3;
+  position: absolute;
+  bottom: 0;
+  animation: bubbles 3s linear infinite;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
+.bubble:nth-child(1) {
+  width: 80px;
+  height: 80px;
+  left: 5%;
+  animation-duration: 3s;
+  animation-delay: 1.5s;
+}
+
+.bubble:nth-child(2) {
+  width: 150px;
+  height: 150px;
+  left: 35%;
+  animation-duration: 2.5s;
+  animation-delay: 3s;
+}
+
+.bubble:nth-child(3) {
+  width: 100px;
+  height: 100px;
+  left: 45%;
+  animation-duration: 3s;
+  animation-delay: 4s;
+}
+
+.bubble:nth-child(4) {
+  width: 59px;
+  height: 59px;
+  left: 55%;
+  animation-duration: 5s;
+  animation-delay: 7s;
+}
+
+.bubble:nth-child(5) {
+  width: 20px;
+  height: 20px;
+  left: 65%;
+  animation-duration: 3s;
+  animation-delay: 4s;
+}
+
+.bubble:nth-child(6) {
+  width: 35px;
+  height: 35px;
+  left: 75%;
+  animation-duration: 3.1s;
+  animation-delay: 2s;
+}
+
+.bubble:nth-child(7) {
+  width: 120px;
+  height: 120px;
+  left: 90%;
+  animation-duration: 4s;
+  animation-delay: 8s;
+}
+
+.bubble:nth-child(8) {
+  width: 120px;
+  height: 120px;
+  left: 10%;
+  animation-duration: 3s;
+  animation-delay: 3s;
+}
+
+.bubble:nth-child(9) {
+  width: 45px;
+  height: 45px;
+  left: 25%;
+  animation-duration: 2s;
+  animation-delay: 2.5s;
+}
+
+.bubble:nth-child(10) {
+  width: 200px;
+  height: 200px;
+  left: 39%;
+  animation-duration: 5s;
+  animation-delay: 1.7s;
+}
+
+.bubble:nth-child(11) {
+  width: 110px;
+  height: 110px;
+  left: 69%;
+  animation-duration: 3.5s;
+  animation-delay: 2s;
+}
+
+.bubble:nth-child(12) {
+  width: 210px;
+  height: 210px;
+  left: 79%;
+  animation-duration: 4s;
+  animation-delay: 3s;
+}
+
+.bubble:nth-child(13) {
+  width: 12px;
+  height: 12px;
+  left: 79%;
+  animation-duration: 3s;
+  animation-delay: 2s;
+}
+.bubble:nth-child(14) {
+  width: 17px;
+  height: 17px;
+  left: 5%;
+  animation-duration: 5s;
+  animation-delay: 2s;
+}
+
+.bubble:nth-child(15) {
+  width: 40px;
+  height: 40px;
+  left: 20%;
+  animation-duration: 5s;
+  animation-delay: 3s;
+}
+
+@keyframes bubbles {
+  0% {
+    bottom: 0;
+    opacity: 0;
+  }
+
+  30% {
+    transform: translatex(100px);
+    transform: translatex(-50px);
+    transform: translatex(100px);
+  }
+
+  50% {
+    opacity: 0.4;
+  }
+
+  100% {
+    bottom: 100vh;
+    opacity: 0;
+  }
+}
+
+// Responsive images mobile
+
+// 480+

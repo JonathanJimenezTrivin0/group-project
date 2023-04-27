@@ -1,5 +1,5 @@
 <header class="header">
-  <div class="header__container">
+  <div class="header__container container">
     <nav class="header__nav">
       <a href="#" class="logo">
         <svg width="199" height="50">
@@ -7,11 +7,13 @@
         </svg>
       </a>
       <ul class="header__navigation">
-        <li class="header__list"><a href="#" class="header__link">Home</a></li>
+        <li class="header__list">
+          <a href="#" class="header__link">Home</a>
+        </li>
         <li class="header__list">
           <a href="#" class="header__link">About us</a>
         </li>
-        <li class="header__list">
+        <li class="header__lis">
           <a href="#" class="header__link">How its made?</a>
         </li>
         <li class="header__list">
@@ -28,12 +30,20 @@
       </button>
     </div>
   </div>
-  <article class="article">
+  <article class="article container">
     <p class="article__paragraph">
       ice cream made with <span class="article__passion">passion</span>
     </p>
+
+    <ul class="number__list">
+      <li><h2 class="number circle">16</h2></li>
+      <li><p class="number__text">cafes</p></li>
+      <li><h2 class="number23 circle">23</h2></li>
+      <li><p class="number__text23">food</p></li>
+    </ul>
   </article>
-  <div class="button__article">
+
+  <div class="button__article container">
     <button type="button" class="button__product" type="submit">
       Products
     </button>
@@ -41,17 +51,49 @@
       How its made?
     </button>
   </div>
-  <article class="images__milk">
-    <img src="./images/milk.png" alt="milk bottle" />
+  <article class="images__milk container">
+    <img src="./images/milk1.png" alt="milk bottle" class="milk__bottle" />
     <p class="milk__paragraph">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
       tempor incididunt ut labore et
-
-      <button type="button" class="right__arrow right__arrow--circle">
-        <svg width="16" height="16">
+      <button type="button" class="right__arrow">
+        <svg width="16" height="16" class="right">
           <use href="./images/icons-svg.svg#right-arrow"></use>
         </svg>
       </button>
     </p>
+
+    <ul class="images__list list">
+      <li>
+        <svg width="534" height="534" class="svg__circle">
+          <use href="./images/ellipse1.svg#icon-Ellipse-3-1"></use>
+        </svg>
+        <img src="./images/ice-cone1.png" alt="ice cone" class="icecone" />
+      </li>
+      <li>
+        <img
+          src="./images/eat-icecream1.png"
+          alt="eat icecream"
+          class="eat__icecream"
+        />
+      </li>
+    </ul>
+    <div class="bubbles">
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+    </div>
   </article>
 </header>
