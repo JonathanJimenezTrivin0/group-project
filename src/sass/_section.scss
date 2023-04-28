@@ -1,84 +1,88 @@
-.section{
-   
-    &__flex{
-      display: grid;
-     grid-template-columns:repeat(5, 5fr);
-   
-       
-    }
-    &__testimonial{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-       
-    }
-    &__style{
-        width: 968px;
-        height: 138px;
-        background: #FAFAFA;
-        display: flex; 
-        justify-content: center;  
-        align-items: center; 
-        margin-top: 16px;
-   margin: auto;
-     
-       
-    }
-    &__tex{
-        width: 750px;
-height: 52px;
-$font-family: 'DM Sans';
-font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 186%;
-text-align: center;
-letter-spacing: 0.04em;
-$color-paragraphs: #000000;
-margin-top: 20px;
-    }
-    &__comillas{
-        width: 54px;
- height: 40px;
-  left: 242px;
- top: 3580px;
- fill: #E1E1E1;
-    }
-    &__positions-svg{
-        margin-left: 20px;
-        
-    }
-    &__puntos{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-top: 60px;
-    }
-    &__puntos-decoration{
-        fill: #C7133E;
-    }
-   &__emily{
+.section {
+  &__flex {
+    display: grid;
+    grid-template-columns: repeat(5, 5fr);
+  }
+  &__testimonial {
     display: flex;
     align-items: center;
     justify-content: center;
-   }
- &__h3{
+  }
+  &__style {
+    width: 968px;
+    height: 138px;
+    background: #fafafa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+    margin: auto;
+  }
+  &__tex {
+    width: 750px;
+    height: 52px;
+    $font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 186%;
+    text-align: center;
+    letter-spacing: 0.04em;
+    $color-paragraphs: #000000;
+    margin-top: 20px;
+  }
+  &__comillas {
+    width: 54px;
+    height: 40px;
+    left: 242px;
+    top: 3580px;
+    fill: #e1e1e1;
+  }
+  &__positions-svg {
+    margin-left: 20px;
+  }
+  &__puntos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+  }
+  &__puntos-decoration {
+    fill: #c7133e;
+  }
+  &__emily {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__h3 {
     width: 172px;
-height: 31px;
-$font-family: 'DM Sans';
-font-style: normal;
-font-weight: 500;
-font-size: 20px;
-line-height: 186%;
-text-align: center;
-color: #000000;
- }
- &__house{
+    height: 31px;
+    $font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 186%;
+    text-align: center;
+    color: #000000;
+  }
+  &__house {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 18px;
-    margin-right: 30px; 
- }
+    margin-right: 30px;
+  }
 }
 
+// Animations images
+
+.scale {
+  cursor: pointer;
+  transition-property: transform;
+
+  &:hover {
+    transform: scale(1.2);
+    transition-duration: 0.5s;
+  }
+}
