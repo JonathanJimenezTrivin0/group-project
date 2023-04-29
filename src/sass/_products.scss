@@ -1,0 +1,205 @@
+* {
+  box-sizing: border-box;
+}
+
+.section {
+  background-color: #ffffff;
+  max-width: 1280px;
+  padding-top: 61px;
+  height: 1219;
+}
+
+.natural {
+  display: flex;
+  justify-content: center;
+  font-family: $font-family-titan;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 34px;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: #ffa5ba;
+  margin-bottom: 16px;
+}
+
+.title-principal {
+  display: flex;
+  justify-content: center;
+  color: $color-primary;
+  font-family: $font-family-titan;
+  font-size: 58px;
+  font-weight: 400;
+  line-height: 66px;
+  letter-spacing: 0.06em;
+  text-align: center;
+  padding-top: 16px;
+}
+
+.conteiner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item {
+  margin-right: 35px;
+}
+
+.cream {
+  background-color: #ffb8ca;
+  margin: 32px;
+  height: 535px;
+  width: 368px;
+  top: 1122px;
+  border-radius: 24px;
+  justify-content: center;
+  color: $color-titles;
+  text-align: center;
+  margin-left: 4px;
+  position: relative;
+  margin-top: -850px;
+  //
+}
+
+.cream_picture {
+  position: absolute;
+  top: -50%;
+  left: 2px;
+}
+
+.cream_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $color-titles;
+  margin-bottom: 220px;
+  align-content: center;
+  position: relative;
+  bottom: -200px;
+}
+
+.cream_paragraph {
+  border-radius: nullpx;
+  font-family: $font-family;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: 0.04em;
+  text-align: center;
+  justify-content: center;
+  color: $color-titles;
+  position: absolute;
+}
+
+.coffee {
+  background-color: #f0d1a5;
+  margin: 32px;
+  height: 535px;
+  width: 368px;
+  left: 16px;
+  top: 1122px;
+  border-radius: 24px;
+  align-items: center;
+  text-align: center;
+  margin-left: -16px;
+  position: relative;
+  margin-top: -850px;
+}
+
+.coffee_picture {
+  position: absolute;
+  top: -50%;
+  left: 2px;
+}
+
+.coffee_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $color-titles;
+  margin-bottom: 220px;
+  position: relative;
+  bottom: -200px;
+}
+
+.coffee_paragraph {
+  border-radius: nullpx;
+  font-family: $font-family;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: 0.04em;
+  text-align: center;
+  justify-content: center;
+  color: $color-titles;
+  position: absolute;
+}
+
+.milkshakes {
+  position: relative;
+  background-color: #c2e297;
+  margin: 32px;
+  height: 535px;
+  width: 368px;
+  left: 16px;
+  top: 1122px;
+  border-radius: 24px;
+  align-items: center;
+  text-align: center;
+  margin-left: 4px;
+  margin-top: -850px;
+}
+
+.milkshakes_picture {
+  position: absolute;
+  top: -50%;
+  left: 2px;
+}
+
+.milkshakes_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $color-titles;
+  margin-bottom: 220px;
+  position: relative;
+  bottom: -200px;
+}
+
+.milkshakes_paragraph {
+  border-radius: nullpx;
+  font-family: $font-family;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: 0.04em;
+  color: $color-titles;
+  position: absolute;
+}
+
+.brown_points {
+  fill: $color-titles;
+  margin-bottom: 20px;
+  border-radius: 0px;
+  cursor: pointer;
+}
+
+.right__arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 140px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  fill: $color-primary;
+  background-color: $color-titles;
+}
+
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
