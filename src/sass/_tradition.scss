@@ -18,10 +18,17 @@
       font-weight: 400;
       font-size: 26px;
       line-height: 30px;
+			letter-spacing: 0.04em;
       text-align: center;
       text-transform: uppercase;
       color: $color-secondary;
       margin-bottom: 2vh;
+			transition: letter-spacing 500ms $cubic;
+
+			&:focus,
+			&:hover {
+				letter-spacing: 0.5em;
+			}
     }
 
     &--title2 {
@@ -30,16 +37,23 @@
       font-weight: 400;
       font-size: 48px;
       line-height: 55px;
+			letter-spacing: 0.06em;
       text-align: center;
       letter-spacing: 0.04em;
       text-transform: uppercase;
       color: $color-primary;
+
+			&:focus,
+				&:hover {
+					letter-spacing: 0.5em;
+				}
     }
   }
 
   &__info {
     display: flex;
     justify-content: space-around;
+		// flex-wrap: wrap;
     margin: 5vh 0;
   }
 
@@ -48,7 +62,38 @@
     justify-content: center;
     width: 100%;
     height: auto;
-  }
+
+	// // 480+
+	// @media screen and (min-device-pixel-ratio: 2),
+	// screen and (min-resolution: 192dpi),
+	// screen and (min-resolution: 2dppx) {
+	// 	background-image: url(../images/traditionpicbig.png);
+	// }
+
+	// // 768+
+	// @media screen and (min-width: 768px) {
+	// 	max-width: 768px;
+	// 	background-image: url(../images/traditionpicmedium.png);
+	// }
+
+	// @media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+	// screen and (min-resolution: 192dpi) and (min-width: 768px),
+	// screen and (min-resolution: 2dppx) and (min-width: 768px) {
+	// 	background-image: url(../images/traditionpicmedium.png);
+	// }
+
+	// /* 1200+ */
+	// @media screen and (min-width: 1200px) {
+	// 	max-width: 1200px;
+	// 	background-image: url(../images/traditionpic.png);
+	// }
+
+	// @media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+	// screen and (min-resolution: 192dpi) and (min-width: 1200px),
+	// screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+	// 	background-image: url(../images/traditionpic.png);
+	// }
+}
 
   &__expo {
     display: flex;
@@ -57,6 +102,7 @@
     width: auto;
     height: auto;
     padding: 6vh 3vw;
+		margin: 10px 0;
   }
 
   &__text {
@@ -68,24 +114,42 @@
     text-align: left;
     color: $color-paragraphs;
     margin: 3vh 0;
+
+		&--2 {
+			font-family: $font-family;
+			font-size: 14px;
+			font-weight: 500;
+			line-height: 25px;
+			letter-spacing: 0.04em;
+			text-align: left;
+			color: $color-detail;
+			margin: 3vh 0 8vh 0;
+		}
   }
 
   &__features {
     display: flex;
-    justify-content: flex-start;
-    padding: 3vh 3vw;
+    justify-content: space-around;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 10px;
+    // padding: 3vh 3vw;
   }
 
   &__card {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    max-width: 30vw;
-    margin-right: 10vw;
+    align-items: center;
+    width: 300px;
 
     &--svg {
       fill: $color-secondary;
       margin-bottom: 2vh;
+
+			&2 {
+				stroke: $color-secondary;
+				margin-bottom: 2vh;
+			}
     }
     &--number {
       font-family: $font-family-titan;
@@ -108,6 +172,24 @@
   }
 }
 
+// Media
+
+// @media screen and (max-width: 1200px) {
+	
+// }
+
+// @media screen and (max-width: 768px) {
+// 	.button {
+// 		display: none;
+// 	}
+// }
+
+// @media screen and (max-width: 1000px) {
+// 	.article__paragraph {
+// 		font-size: 33px;
+// 	}
+// }
+
 // Animations traditionsection
 
 .tradition__picture:hover {
@@ -120,9 +202,10 @@
   }
 }
 
-.tradition__card--svg {
+.tradition__card--svg, .tradition__card--svg2 {
   animation: turns 10s infinite;
 }
+
 @keyframes turns {
   50% {
     transform: rotate(720deg);
