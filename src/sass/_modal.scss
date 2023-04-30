@@ -11,7 +11,7 @@
   cursor: pointer;
   border: none;
   outline: none;
-  fill: $color-primary;
+	stroke: $color-primary;
   transition: fill 250ms $cubic;
 }
 
@@ -23,7 +23,7 @@
 
 .menu-toggle:hover,
 .menu-toggle:focus {
-  fill: $color-titles;
+	stroke: $color-titles;
 }
 
 .icon__menu {
@@ -93,13 +93,13 @@
 }
 
 .close-button {
-  fill: $color-titles;
+  stroke: $color-titles;
   z-index: 2;
 }
 
 .close-button:hover,
 .close-button:focus {
-  fill: $color-primary;
+  stroke: $color-primary;
 }
 
 // Button modal
