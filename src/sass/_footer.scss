@@ -170,6 +170,7 @@ background: #FFFFFF;
 border-radius: 22px;
 color: #D41342;
 border-style: none;
+
 }
 
 &__info{
@@ -193,7 +194,8 @@ border-style: none;
     background:#FFA5BA ;
     cursor: pointer;
     &:hover{
-        background-color:#f087a0;
+        background-color:#d41443;
+        
     }
 }
 &__svg{
@@ -219,11 +221,11 @@ letter-spacing: 0.02em;
 color: #907E82;
 
 }
-&__avisos{
+
    
 // margin-right: 520px;
 // margin-top: 60px;
-}
+
 &__estyl-avisos{
 //     width: 472px;
 // height: 34px;
