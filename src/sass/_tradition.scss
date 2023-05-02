@@ -42,6 +42,7 @@
       letter-spacing: 0.04em;
       text-transform: uppercase;
       color: $color-primary;
+			transition: letter-spacing 500ms $cubic;
 
 			&:focus,
 				&:hover {
@@ -62,44 +63,49 @@
     justify-content: center;
     width: 100%;
     height: auto;
+	}
 
-	// // 480+
-	// @media screen and (min-device-pixel-ratio: 2),
-	// screen and (min-resolution: 192dpi),
-	// screen and (min-resolution: 2dppx) {
-	// 	background-image: url(../images/traditionpicbig.png);
-	// }
+	.traditionpic {
+		background-position: center;
+		background-repeat: no-repeat;
 
-	// // 768+
-	// @media screen and (min-width: 768px) {
-	// 	max-width: 768px;
-	// 	background-image: url(../images/traditionpicmedium.png);
-	// }
+	// 480+
+	@media screen and (min-device-pixel-ratio: 2),
+	screen and (min-resolution: 192dpi),
+	screen and (min-resolution: 2dppx) {
+		background-image: url(../images/traditionpicbig.png);
+	}
 
-	// @media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
-	// screen and (min-resolution: 192dpi) and (min-width: 768px),
-	// screen and (min-resolution: 2dppx) and (min-width: 768px) {
-	// 	background-image: url(../images/traditionpicmedium.png);
-	// }
+	// 768+
+	@media screen and (min-width: 768px) {
+		max-width: 768px;
+		background-image: url(../images/traditionpicmedium.png);
+	}
 
-	// /* 1200+ */
-	// @media screen and (min-width: 1200px) {
-	// 	max-width: 1200px;
-	// 	background-image: url(../images/traditionpic.png);
-	// }
+	@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+	screen and (min-resolution: 192dpi) and (min-width: 768px),
+	screen and (min-resolution: 2dppx) and (min-width: 768px) {
+		background-image: url(../images/traditionpicmedium.png);
+	}
 
-	// @media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
-	// screen and (min-resolution: 192dpi) and (min-width: 1200px),
-	// screen and (min-resolution: 2dppx) and (min-width: 1200px) {
-	// 	background-image: url(../images/traditionpic.png);
-	// }
+	/* 1200+ */
+	@media screen and (min-width: 1200px) {
+		max-width: 1200px;
+		background-image: url(../images/traditionpic.png);
+	}
+
+	@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+	screen and (min-resolution: 192dpi) and (min-width: 1200px),
+	screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+		background-image: url(../images/traditionpic.png);
+	}
 }
 
   &__expo {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: auto;
+    width: 60vw;
     height: auto;
     padding: 6vh 3vw;
 		margin: 10px 0;
@@ -114,6 +120,7 @@
     text-align: left;
     color: $color-paragraphs;
     margin: 3vh 0;
+		transition: scale 500ms $cubic;
 
 		&--2 {
 			font-family: $font-family;
@@ -124,6 +131,7 @@
 			text-align: left;
 			color: $color-detail;
 			margin: 3vh 0 8vh 0;
+			transition: scale 500ms $cubic;
 		}
   }
 
@@ -133,7 +141,7 @@
 		align-items: center;
 		flex-wrap: wrap;
 		gap: 10px;
-    // padding: 3vh 3vw;
+		padding-bottom: 60px;
   }
 
   &__card {
@@ -174,21 +182,36 @@
 
 // Media
 
-// @media screen and (max-width: 1200px) {
-	
-// }
+@media screen and (max-width: 1200px) {
+	.traditionpic {
+			width: 700px;
+			height: 700px;
+		}	
+}
 
-// @media screen and (max-width: 768px) {
-// 	.button {
-// 		display: none;
-// 	}
-// }
+@media screen and (max-width: 768px) {
+	.tradition__info {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
 
-// @media screen and (max-width: 1000px) {
-// 	.article__paragraph {
-// 		font-size: 33px;
-// 	}
-// }
+	.tradition__expo {
+		padding: 3vh 10vw;
+		width: auto;
+	}
+
+	.tradition__text:hover, .tradition__text--2:hover {
+		scale: 1.1;		
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.traditionpic {
+		width: 500px;
+		height: 500px;
+	}
+}
 
 // Animations traditionsection
 
@@ -212,7 +235,7 @@
   }
 }
 
-.tradition__features:hover {
+.tradition__card:hover {
   animation: girar 8s;
 }
 

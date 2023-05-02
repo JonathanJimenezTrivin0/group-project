@@ -26,6 +26,7 @@
 	opacity: 0.9;
 	transition: opacity 500ms $cubic;
 	transition: font-size 500ms $cubic;
+	transition: box-shadow 500ms $cubic;
 
 	&:focus,
 	&:hover {
@@ -47,6 +48,114 @@
   position: absolute;
   top: -270px;
   left: 2px;
+}
+
+.creampicture {
+	background-position: center;
+	background-repeat: no-repeat;
+
+	// 480+
+	@media screen and (min-device-pixel-ratio: 2),
+	screen and (min-resolution: 192dpi),
+	screen and (min-resolution: 2dppx) {
+		background-image: url(../images/creampicturebig.png);
+	}
+
+	// 768+
+	@media screen and (min-width: 768px) {
+		max-width: 768px;
+		background-image: url(../images/creampicturemedium.png);
+	}
+
+	@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+	screen and (min-resolution: 192dpi) and (min-width: 768px),
+	screen and (min-resolution: 2dppx) and (min-width: 768px) {
+		background-image: url(../images/creampicturemedium.png);
+	}
+
+	/* 1200+ */
+	@media screen and (min-width: 1200px) {
+		max-width: 1200px;
+		background-image: url(../images/creampicturesmall.png);
+	}
+
+	@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+	screen and (min-resolution: 192dpi) and (min-width: 1200px),
+	screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+		background-image: url(../images/creampicturesmall.png);
+	}
+}
+
+.coffeepicture {
+	background-position: center;
+	background-repeat: no-repeat;
+
+	// 480+
+	@media screen and (min-device-pixel-ratio: 2),
+	screen and (min-resolution: 192dpi),
+	screen and (min-resolution: 2dppx) {
+		background-image: url(../images/coffeepicturebig.png);
+	}
+
+	// 768+
+	@media screen and (min-width: 768px) {
+		max-width: 768px;
+		background-image: url(../images/coffeepicturemedium.png);
+	}
+
+	@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+	screen and (min-resolution: 192dpi) and (min-width: 768px),
+	screen and (min-resolution: 2dppx) and (min-width: 768px) {
+		background-image: url(../images/coffeepicturemedium.png);
+	}
+
+	/* 1200+ */
+	@media screen and (min-width: 1200px) {
+		max-width: 1200px;
+		background-image: url(../images/coffeepicturesmall.png);
+	}
+
+	@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+	screen and (min-resolution: 192dpi) and (min-width: 1200px),
+	screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+		background-image: url(../images/coffeepicturesmall.png);
+	}
+}
+
+.milkshakepicture {
+	background-position: center;
+	background-repeat: no-repeat;
+
+	// 480+
+	@media screen and (min-device-pixel-ratio: 2),
+	screen and (min-resolution: 192dpi),
+	screen and (min-resolution: 2dppx) {
+		background-image: url(../images/milkshakepicturebig.png);
+	}
+
+	// 768+
+	@media screen and (min-width: 768px) {
+		max-width: 768px;
+		background-image: url(../images/milkshakepicturemedium.png);
+	}
+
+	@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+	screen and (min-resolution: 192dpi) and (min-width: 768px),
+	screen and (min-resolution: 2dppx) and (min-width: 768px) {
+		background-image: url(../images/milkshakepicturemedium.png);
+	}
+
+	/* 1200+ */
+	@media screen and (min-width: 1200px) {
+		max-width: 1200px;
+		background-image: url(../images/milkshakepicturesmall.png);
+	}
+
+	@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+	screen and (min-resolution: 192dpi) and (min-width: 1200px),
+	screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+		background-image: url(../images/milkshakepicturesmall.png);
+	}
 }
 
 .cream_title {
