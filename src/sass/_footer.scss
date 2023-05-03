@@ -306,6 +306,20 @@
   }
 }
 
+// media query
+
+@media screen and (max-width: 768px) {
+	.footer__estyl-avisos, .footer__estyl-avisos3 {
+		font-size: 25px;
+		line-height: 30px;
+	}
+
+	.passionletter {
+		font-size: 49px;
+		line-height: 60px;
+	}
+}
+
 // Animation buttons
 
 .footer__boton:hover {
