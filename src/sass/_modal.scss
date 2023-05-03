@@ -11,7 +11,7 @@
   cursor: pointer;
   border: none;
   outline: none;
-	stroke: $color-primary;
+  stroke: $color-primary;
   transition: fill 250ms $cubic;
 }
 
@@ -23,7 +23,7 @@
 
 .menu-toggle:hover,
 .menu-toggle:focus {
-	stroke: $color-titles;
+  stroke: $color-titles;
 }
 
 .icon__menu {
@@ -68,6 +68,12 @@
 
   100% {
     background-position: 1% 50%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .menu-container {
+    height: 400px;
   }
 }
 
