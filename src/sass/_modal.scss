@@ -1,0 +1,161 @@
+.menu-toggle {
+  min-height: 40px;
+  min-width: 40px;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+	stroke: $color-primary;
+  transition: fill 250ms $cubic;
+}
+
+@media (min-width: 1200px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+	stroke: $color-titles;
+}
+
+.icon__menu {
+  position: absolute;
+  right: 32px;
+  z-index: 999;
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 32px;
+  background: linear-gradient(
+    130deg,
+    $color-background-modal,
+    $color-primary1,
+    $color-background,
+    $color-primary
+  );
+  z-index: 999;
+  overflow: hidden;
+  background-size: 400% 400%;
+  transform: translateX(100%);
+  transition: fill 250ms $cubic;
+  transition: transform 250ms ease-in-out;
+  animation: degradeModal 4s ease infinite;
+}
+
+@keyframes degradeModal {
+  0% {
+    background-position: 1% 50%;
+  }
+
+  50% {
+    background-position: 99% 50%;
+  }
+
+  100% {
+    background-position: 1% 50%;
+  }
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+}
+
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: $color-titles;
+}
+
+.mobile-menu {
+  margin-top: 33px;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.close-button {
+  stroke: $color-titles;
+  z-index: 2;
+}
+
+.close-button:hover,
+.close-button:focus {
+  stroke: $color-primary;
+}
+
+// Button modal
+
+.btn {
+  display: flex;
+  justify-content: center;
+  transition-property: transform;
+  z-index: 6;
+  &:hover {
+    transform: scale(0.75);
+    transition-duration: 2000ms;
+  }
+}
+
+.btn__mobile {
+  width: 159px;
+  height: 44px;
+  border-radius: 22px;
+  margin-top: 50px;
+  background-color: $color-titles;
+  color: $color-primary;
+  border: none;
+  cursor: pointer;
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  z-index: 6;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+
+  &:focus,
+  &:hover {
+    font-family: $font-family-titan;
+  }
+}
+
+// Nav mobile
+
+.mobile__link {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  font-family: $font-family;
+  color: $color-titles;
+  text-decoration: none;
+  font-style: normal;
+  transition: color 500ms $cubic;
+  z-index: 3;
+
+  &:focus,
+  &:hover {
+    color: $color-primary;
+    font-family: $font-family-titan;
+    text-shadow: 11px 7px 0px rgba(212, 20, 67, 0.21);
+  }
+}

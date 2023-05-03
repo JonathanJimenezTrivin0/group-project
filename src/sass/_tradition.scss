@@ -1,0 +1,279 @@
+.tradition {
+  background-color: #fff5f6;
+  padding: 10vh 0;
+
+  &__bg {
+    background-image: url(../images/traditionbg.png);
+    background-repeat: no-repeat;
+    background-size: 100vw;
+  }
+
+  &__titles {
+    text-align: center;
+    margin-bottom: 6vh;
+
+    &--title1 {
+      font-family: $font-family-titan;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 26px;
+      line-height: 30px;
+			letter-spacing: 0.04em;
+      text-align: center;
+      text-transform: uppercase;
+      color: $color-secondary;
+      margin-bottom: 2vh;
+			transition: letter-spacing 500ms $cubic;
+
+			&:focus,
+			&:hover {
+				letter-spacing: 0.5em;
+			}
+    }
+
+    &--title2 {
+      font-family: $font-family-titan;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 48px;
+      line-height: 55px;
+			letter-spacing: 0.06em;
+      text-align: center;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: $color-primary;
+			transition: letter-spacing 500ms $cubic;
+
+			&:focus,
+				&:hover {
+					letter-spacing: 0.5em;
+				}
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-around;
+		// flex-wrap: wrap;
+    margin: 5vh 0;
+  }
+
+  &__picture {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+	}
+
+	.traditionpic {
+		background-position: center;
+		background-repeat: no-repeat;
+
+	// 480+
+	@media screen and (min-device-pixel-ratio: 2),
+	screen and (min-resolution: 192dpi),
+	screen and (min-resolution: 2dppx) {
+		background-image: url(../images/traditionpicbig.png);
+	}
+
+	// 768+
+	@media screen and (min-width: 768px) {
+		max-width: 768px;
+		background-image: url(../images/traditionpicmedium.png);
+	}
+
+	@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+	screen and (min-resolution: 192dpi) and (min-width: 768px),
+	screen and (min-resolution: 2dppx) and (min-width: 768px) {
+		background-image: url(../images/traditionpicmedium.png);
+	}
+
+	/* 1200+ */
+	@media screen and (min-width: 1200px) {
+		max-width: 1200px;
+		background-image: url(../images/traditionpic.png);
+	}
+
+	@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+	screen and (min-resolution: 192dpi) and (min-width: 1200px),
+	screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+		background-image: url(../images/traditionpic.png);
+	}
+}
+
+  &__expo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 60vw;
+    height: auto;
+    padding: 6vh 3vw;
+		margin: 10px 0;
+  }
+
+  &__text {
+    font-family: $font-family;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 25px;
+    letter-spacing: 0.04em;
+    text-align: left;
+    color: $color-paragraphs;
+    margin: 3vh 0;
+		transition: scale 500ms $cubic;
+
+		&--2 {
+			font-family: $font-family;
+			font-size: 14px;
+			font-weight: 500;
+			line-height: 25px;
+			letter-spacing: 0.04em;
+			text-align: left;
+			color: $color-detail;
+			margin: 3vh 0 8vh 0;
+			transition: scale 500ms $cubic;
+		}
+  }
+
+  &__features {
+    display: flex;
+    justify-content: space-around;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 10px;
+		padding-bottom: 60px;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+
+    &--svg {
+      fill: $color-secondary;
+      margin-bottom: 2vh;
+
+			&2 {
+				stroke: $color-secondary;
+				margin-bottom: 2vh;
+			}
+    }
+    &--number {
+      font-family: $font-family-titan;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 48px;
+      line-height: 55px;
+      letter-spacing: 0.04em;
+      color: $color-primary;
+      margin-bottom: 3vh;
+    }
+    &--text {
+      font-family: $font-family;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 174%;
+      color: $color-paragraphs;
+    }
+  }
+}
+
+// Media
+
+@media screen and (max-width: 1200px) {
+	.traditionpic {
+			width: 700px;
+			height: 700px;
+		}	
+}
+
+@media screen and (max-width: 768px) {
+	.tradition__info {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.tradition__expo {
+		padding: 3vh 10vw;
+		width: auto;
+	}
+
+	.tradition__text:hover, .tradition__text--2:hover {
+		scale: 1.1;		
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.traditionpic {
+		width: 500px;
+		height: 500px;
+	}
+}
+
+// Animations traditionsection
+
+.tradition__picture:hover {
+  animation: turn 10s;
+}
+
+@keyframes turn {
+  50% {
+    transform: rotate(90deg);
+  }
+}
+
+.tradition__card--svg, .tradition__card--svg2 {
+  animation: turns 10s infinite;
+}
+
+@keyframes turns {
+  50% {
+    transform: rotate(720deg);
+  }
+}
+
+.tradition__card:hover {
+  animation: girar 8s;
+}
+
+@keyframes girar {
+  50% {
+    transform: rotate(-360deg);
+  }
+}
+
+// Button
+
+.button__header {
+  transition-property: transform;
+
+  &:hover {
+    transform: scale(0.75);
+    transition-duration: 2s;
+  }
+}
+
+// tradition
+
+.tradition {
+  background: linear-gradient(130deg, #fff5f6, #fce9f1, #facbda);
+  background-size: 400% 400%;
+  animation: degrade 8s ease infinite;
+}
+
+@keyframes degrade {
+  0% {
+    background-position: 1% 50%;
+  }
+
+  50% {
+    background-position: 99% 50%;
+  }
+
+  100% {
+    background-position: 1% 50%;
+  }
+}

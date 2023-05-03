@@ -1,0 +1,203 @@
+.conteiner {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.card-container {
+	padding-top: 250px;
+	position: relative;
+}
+
+.cream {
+  background-color: #ffb8ca;
+  height: auto;
+  width: 368px;
+  border-radius: 24px;
+	padding: 150px 50px 30px 50px;
+	display: flex;
+	flex-direction: column;
+  justify-content: center;
+	align-items: center;
+  text-align: center;
+  position: relative;
+	opacity: 0.9;
+	transition: opacity 500ms $cubic;
+	transition: font-size 500ms $cubic;
+	transition: box-shadow 500ms $cubic;
+
+	&:focus,
+	&:hover {
+		opacity: 1.0;
+		box-shadow: 0px 5px 10px 2px rgb(134, 133, 133);
+		cursor: pointer;
+
+		.cream_title {
+			font-size: 35px;
+		}
+
+		.cream_paragraph {
+			font-size: 18px;
+		}
+	}
+}
+
+.cream_picture {
+  position: absolute;
+  top: -270px;
+  left: 2px;
+}
+
+.creampicture {
+	background-position: center;
+	background-repeat: no-repeat;
+
+	// 480+
+	@media screen and (min-device-pixel-ratio: 2),
+	screen and (min-resolution: 192dpi),
+	screen and (min-resolution: 2dppx) {
+		background-image: url(../images/creampicturebig.png);
+	}
+
+	// 768+
+	@media screen and (min-width: 768px) {
+		max-width: 768px;
+		background-image: url(../images/creampicturemedium.png);
+	}
+
+	@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+	screen and (min-resolution: 192dpi) and (min-width: 768px),
+	screen and (min-resolution: 2dppx) and (min-width: 768px) {
+		background-image: url(../images/creampicturemedium.png);
+	}
+
+	/* 1200+ */
+	@media screen and (min-width: 1200px) {
+		max-width: 1200px;
+		background-image: url(../images/creampicturesmall.png);
+	}
+
+	@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+	screen and (min-resolution: 192dpi) and (min-width: 1200px),
+	screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+		background-image: url(../images/creampicturesmall.png);
+	}
+}
+
+.coffeepicture {
+	background-position: center;
+	background-repeat: no-repeat;
+
+	// 480+
+	@media screen and (min-device-pixel-ratio: 2),
+	screen and (min-resolution: 192dpi),
+	screen and (min-resolution: 2dppx) {
+		background-image: url(../images/coffeepicturebig.png);
+	}
+
+	// 768+
+	@media screen and (min-width: 768px) {
+		max-width: 768px;
+		background-image: url(../images/coffeepicturemedium.png);
+	}
+
+	@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+	screen and (min-resolution: 192dpi) and (min-width: 768px),
+	screen and (min-resolution: 2dppx) and (min-width: 768px) {
+		background-image: url(../images/coffeepicturemedium.png);
+	}
+
+	/* 1200+ */
+	@media screen and (min-width: 1200px) {
+		max-width: 1200px;
+		background-image: url(../images/coffeepicturesmall.png);
+	}
+
+	@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+	screen and (min-resolution: 192dpi) and (min-width: 1200px),
+	screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+		background-image: url(../images/coffeepicturesmall.png);
+	}
+}
+
+.milkshakepicture {
+	background-position: center;
+	background-repeat: no-repeat;
+
+	// 480+
+	@media screen and (min-device-pixel-ratio: 2),
+	screen and (min-resolution: 192dpi),
+	screen and (min-resolution: 2dppx) {
+		background-image: url(../images/milkshakepicturebig.png);
+	}
+
+	// 768+
+	@media screen and (min-width: 768px) {
+		max-width: 768px;
+		background-image: url(../images/milkshakepicturemedium.png);
+	}
+
+	@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+	screen and (min-resolution: 192dpi) and (min-width: 768px),
+	screen and (min-resolution: 2dppx) and (min-width: 768px) {
+		background-image: url(../images/milkshakepicturemedium.png);
+	}
+
+	/* 1200+ */
+	@media screen and (min-width: 1200px) {
+		max-width: 1200px;
+		background-image: url(../images/milkshakepicturesmall.png);
+	}
+
+	@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+	screen and (min-resolution: 192dpi) and (min-width: 1200px),
+	screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+		background-image: url(../images/milkshakepicturesmall.png);
+	}
+}
+
+.cream_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+	font-family: $font-family-titan;
+  color: $color-titles;
+	font-weight: 400;
+	font-size: 30px;
+	line-height: 34px;
+	text-align: center;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	margin-bottom: 15px;
+}
+
+.cream_paragraph {
+  font-family: $font-family;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: 0.04em;
+  text-align: center;
+  justify-content: center;
+  color: $color-titles;
+	margin: 15px 0;
+}
+
+.coffee {
+  background-color: #f0d1a5;
+}
+
+.milkshakes {
+  background-color: #c2e297;
+}
+
+.brown_points {
+	fill: $color-titles;
+  margin: 15px 0;
+}
+
+.right {
+  margin: 15px 0;
+}
